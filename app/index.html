@@ -9,6 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -19,12 +20,375 @@
 
     <div class="hero-unit">
       <h1>Práctica validación formularios</h1>
-      <p>Aquí debería ir el enlace a <a href="https://github.com/juanda99/practica-validacion-formularios">tu respositorio en GitHub</a>, donde estará la versión de desarrollo.</p>
+      <p><a href="https://github.com/JTavira/practica-validacion-formularios.git">JTavira en GitHub</a></p>
     </div>
 
 
-    <!-- build:js(.) scripts/vendor.js -->
+   
+
+<div class="container" >
+
+
+
+
+<form role="form-horizontal" id="frm_validar" novalidate>
+
+
+
+
+
+
+<fieldset class="col-md-offset-1 col-md-5">
+
+
+<legend>Datos personales</legend>
+
+
+<div class="form-group">
+
+
+<label for="nombre">Nombre <span class="glyphicon glyphicon-asterisk"></span></label>
+
+
+<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+
+
+</div>
+
+
+<div class="form-group ">
+
+
+<label for="apellidos">Apellidos</label>
+
+
+<input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos">
+
+
+</div>
+
+
+<div class="form-group ">
+
+
+<label for="email">Edad</label>
+
+
+<input type="edad" class="form-control" id="edad" name="edad">
+
+
+</div>
+
+<div class="form-group ">
+
+
+<label for="telefono">Teléfono</label>
+
+
+<input type="text" class="form-control" id="telefono" name="telefono" placeholder="Introduce tu teléfono">
+
+
+</div>
+
+
+<div class="form-group ">
+
+
+<label for="email">Email</label>
+
+
+<input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com">
+
+
+</div>
+
+
+<div class="form-group ">
+
+
+<label for="email2">Otra vez tu email</label>
+
+
+<input type="email" class="form-control" id="email2" name="email2" placeholder="ejemplo@mail.com">
+
+
+</div>
+
+
+<div class="form-group ">
+
+
+<label for="pregunta">¿Cómo nos has conocido?</label>
+
+
+<select name="pregunta">
+
+
+<option value="1">Prefiero no contestar</option>
+
+
+<option value="2">Publicidad</option>
+
+
+<option value="3">Profesionales del sector</option>
+
+
+<option value="4">Internet</option>
+
+
+<option value="5">A través de un amigo o conocido</option>
+
+
+</select>
+
+
+</div>
+
+
+</fieldset>
+
+
+
+
+
+
+<fieldset class="col-md-offset-1 col-md-5">
+
+
+<legend>Datos de facturación:</legend>
+
+
+<div class="form-group">
+
+
+<label for="demandante">Demandante</label>
+
+
+<input type="radio" name="demandante" value="particular" checked>Particular
+
+
+<input type="radio" name="demandante" value="empresa">Empresa
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="dni">CIF/NIF</label>
+
+
+<input type="text" class="form-control" id="nif" name="nif">
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="nombre_empresa">Nombre/Empresa</label>
+
+
+<input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa">
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="direccion">Dirección</label>
+
+
+<input type="text" class="form-control" id="direccion" name="direccion">
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="cp">CP</label>
+
+
+<input type="text" class="form-control" id="cp" name="cp">
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="localidad">Localidad</label>
+
+
+<select name="localidad">
+
+
+<option value="1">Prefiero no contestar</option>
+
+
+<option value="2">Publicidad</option>
+
+
+<option value="3">Profesionales del sector</option>
+
+
+<option value="4">Internet</option>
+
+
+<option value="5">A través de un amigo o conocido</option>
+
+
+</select>
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="provincia">Provincia</label>
+
+
+<select name="provincia">
+
+
+<option value="1">Prefiero no contestar</option>
+
+
+<option value="2">Publicidad</option>
+
+
+<option value="3">Profesionales del sector</option>
+
+
+<option value="4">Internet</option>
+
+
+<option value="5">A través de un amigo o conocido</option>
+
+
+</select>
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="pais">País</label>
+
+
+<input type="text" class="form-control" id="pais" name="pais">
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="iban">Iban</label>
+
+
+<input type="text" class="form-control" id="iban" name="iban">
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="pago">Forma de pago:</label>
+
+
+<select name="pago">
+
+
+<option value="1">Mensual</option>
+
+
+<option value="2">Trimestral</option>
+
+
+<option value="3">Anual</option>
+
+
+</select>
+
+
+</div>
+
+
+</fieldset>
+
+
+
+
+
+
+<fieldset class="col-md-offset-1 col-md-5">
+
+
+<legend>Datos de acceso:</legend>
+
+
+<div class="form-group">
+
+
+<label for="usuario">Usuario</label>
+
+
+<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Introduce tu usuario">
+
+
+</div>
+
+
+<div class="form-group">
+
+
+<label for="password">Contraseña</label>
+
+
+<input type="password" class="form-control" id="password" name="password" placeholder="Introduce tu contraseña">
+
+
+<input type="password" class="form-control" id="password2" name="password2" placeholder="Introduce otra vez tu contraseña">
+
+
+</div>
+
+
+</fieldset>
+
+
+<div class="form-group col-md-8">
+
+
+<button type="submit" class="btn btn-primary">Enviar</button>
+
+
+</div>
+
+</form>
+
+
+</div>
+ <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
