@@ -14,7 +14,7 @@ $(document).ready(function () {
            rules: {
                nombre: {
                    required: true,
-                   min:4
+                   minlength:4
                    
                }, 
                apellidos: {
