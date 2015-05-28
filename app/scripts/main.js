@@ -19,7 +19,7 @@ $(document).ready(function () {
                }, 
                apellidos: {
                    required: true,
-                   remote: "http://www.futbolistas.com/users.php"
+                   remote: "http://localhost:9000"
                },
                edad: {
                    required: true,
@@ -29,7 +29,7 @@ $(document).ready(function () {
                email: {
                    email: true,
                    required: true,
-                   remote: "http://localhost/validar/email.php"
+                   remote: "php/validar_email_db.php"
                },
                email2: {
                    equalTo: "#email"

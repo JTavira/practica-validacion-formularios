@@ -1,7 +1,10 @@
 body {
-  background: #fafafa;
+  background: #F6A10E;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  /*background-image: "http://wallruru.com/wp-content/uploads/2014/08/White-Background-25.png";
+*/
+
 }
 
 .hero-unit {
@@ -10,7 +13,7 @@ body {
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
-  background-color: #eee;
+  background-color: #DFB56C;
   border-radius: 6px;
   padding: 60px;
 }
