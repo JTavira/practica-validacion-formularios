@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Práctica validación formularios</title>
     <meta name="description" content="">
@@ -15,385 +16,168 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body>
+</head>
 
-    <div class="hero-unit">
-      <h2>Práctica: Validación formularios</h2>
-      <p><a href="https://github.com/JTavira/practica-validacion-formularios.git">JTavira en GitHub</a></p>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">VALIDACIÓN DE FORMULARIO</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <form role="form-horizontal" id="frm_validar" novalidate>
+
+            <fieldset class="col-md-offset-1 col-md-5">
+                <legend>Datos personales</legend>
+                <div class="form-group">
+                    <label for="nombre">Nombre <span class="glyphicon glyphicon-asterisk"></span>
+                    </label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+                </div>
+                <div class="form-group ">
+                    <label for="apellidos">Apellidos <span class="glyphicon glyphicon-asterisk"></span>
+                    </label>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos">
+                </div>
+                <div class="form-group ">
+                    <label for="telefono">Teléfono <span class="glyphicon glyphicon-asterisk"></span>
+                    </label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Introduce tu teléfono" maxlength="9">
+                </div>
+                <div class="form-group ">
+                    <label for="email">Email <span class="glyphicon glyphicon-asterisk"></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com">
+              </div> 
+              <div class="form-group ">
+                <label for="email2">Otra vez tu email <span class="glyphicon glyphicon-asterisk"></label>
+                <input type="email" class="form-control" id="email2" name="email2" placeholder="ejemplo@mail.com">
+              </div> 
+              <div class="form-group ">
+                <label for="pregunta">¿Cómo nos has conocido?</label>
+                <select name="pregunta">
+                  <option value="1">Prefiero no contestar</option>
+                  <option value="2">Publicidad</option>
+                  <option value="3">Profesionales del sector</option>
+                  <option value="4">Internet</option>
+                  <option value="5">A través de un amigo o conocido</option>
+                </select>                
+              </div>                         
+            </fieldset>  
+            
+         <fieldset class="col-md-offset-1  col-md-5">  
+             <legend>Datos de facturación:</legend>                   
+              <div class="form-group">
+                <label for="demandante">Demandante</label>
+                <input type="radio" name="demandante" value="particular" checked>Particular
+<input type="radio" name="demandante" value="empresa">Empresa                
+              </div>
+              <div class="form-group">
+                <label for="nif">NIF <span class="glyphicon glyphicon-asterisk"></label>
+                 <input type="text" maxlength="9" class="form-control" id="nif" name="nif">
+                <input type="text" maxlength="9" class="form-control hide" id="nif" name="cif">
+              </div>
+              <div class="form-group">
+                <label for="nombre_empresa">Nombre </label>
+                <input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa">
+              </div> 
+              <div class="form-group">
+                <label for="direccion">Dirección <span class="glyphicon glyphicon-asterisk"></span>
+                    </label>
+                    <input type="text" class="form-control" id="direccion" name="direccion">
+                </div>
+                <div class="form-group">
+                    <label for="cp">CP <span class="glyphicon glyphicon-asterisk"></label>
+                <input type="text" class="form-control" id="cp" name="cp">
+              </div>
+              <div class="form-group">
+                <label for="localidad">Localidad</label>
+                <input type="text" class="form-control" id="localidad" name="localidad" disabled>
+              </div> 
+              <div class="form-group">
+                <label for="provincia">Provincia</label>
+                <input type="text" class="form-control" id="provincia" name="provincia" disabled>                
+              </div>
+              <div class="form-group">
+                <label for="pais">País <span class="glyphicon glyphicon-asterisk"></label>
+                <input type="text" class="form-control" id="pais" name="pais">
+              </div>
+              <div class="form-group">
+                <label for="iban">Iban <span class="glyphicon glyphicon-asterisk"></span>
+                    </label>
+                    <input type="text" class="form-control" id="iban" name="iban">
+                </div>
+                <div class="form-group">
+                    <label for="pago">Forma de pago:</label>
+                    <select name="pago" id="pagos">
+                        <option value="1">Mensual</option>
+                        <option value="2">Trimestral</option>
+                        <option value="3">Anual</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset class="col-md-offset-1  col-md-5">
+                <legend>Datos de acceso:</legend>
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña
+                                        <div class="progress">
+                        <div id="complexity-bar" class="progress-bar" role="progressbar">
+                        </div>
+                    </div>   
+                    
+                    
+                    </label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña, 12 carácteres mínimo, combina letras y números">
+               
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password2" name="password2" placeholder="Introduce otra vez tu contraseña">
+                </div>
+            </fieldset>
+            <div class="form-group col-md-8">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
     </div>
-
-
-   
-
-<div class="container" >
-
-
-
-
-<form role="form-horizontal" id="frm_validar" novalidate>
-
-
-
-
-
-
-<fieldset class="col-md-offset-1 col-md-5">
-
-
-<legend>Datos personales</legend>
-
-
-<div class="form-group">
-
-
-<label for="nombre">Nombre <span class="glyphicon glyphicon-asterisk" color= "red"></span></label>
-
-
-<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre">
-
-
-</div>
-
-
-<div class="form-group ">
-
-
-<label for="apellidos">Apellidos</label>
-
-
-<input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos">
-
-
-</div>
-
-
-<div class="form-group ">
-
-
-<label for="email">Edad</label>
-
-
-<input type="edad" class="form-control" id="edad" name="edad">
-
-
-</div>
-
-<div class="form-group ">
-
-
-<label for="telefono">Teléfono</label>
-
-
-<input type="text" class="form-control" id="telefono" name="telefono" placeholder="Introduce tu teléfono">
-
-
-</div>
-
-
-<div class="form-group ">
-
-
-<label for="email">Email</label>
-
-
-<input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com">
-
-
-</div>
-
-
-<div class="form-group ">
-
-
-<label for="email2">Otra vez tu email</label>
-
-
-<input type="email" class="form-control" id="email2" name="email2" placeholder="ejemplo@mail.com">
-
-
-</div>
-
-
-<div class="form-group ">
-
-
-<label for="pregunta">¿Cómo nos has conocido?</label>
-
-
-<select name="pregunta">
-
-
-<option value="1">Prefiero no contestar</option>
-
-
-<option value="2">Publicidad</option>
-
-
-<option value="3">Profesionales del sector</option>
-
-
-<option value="4">Internet</option>
-
-
-<option value="5">A través de un amigo o conocido</option>
-
-
-</select>
-
-
-</div>
-
-
-</fieldset>
-
-
-
-
-
-
-<fieldset class="col-md-offset-1 col-md-5">
-
-
-<legend>Datos de facturación:</legend>
-
-
-<div class="form-group">
-
-
-<label for="demandante">Demandante</label>
-
-
-<input type="radio" name="demandante" value="particular" checked>Particular
-
-
-<input type="radio" name="demandante" value="empresa">Empresa
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="dni">CIF/NIF</label>
-
-
-<input type="text" class="form-control" id="nif" name="nif">
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="nombre_empresa">Nombre/Empresa</label>
-
-
-<input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa">
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="direccion">Dirección</label>
-
-
-<input type="text" class="form-control" id="direccion" name="direccion">
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="cp">CP</label>
-
-
-<input type="text" class="form-control" id="cp" name="cp">
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="localidad">Localidad</label>
-
-
-<select name="localidad">
-
-
-<option value="1">Prefiero no contestar</option>
-
-
-<option value="2">Publicidad</option>
-
-
-<option value="3">Profesionales del sector</option>
-
-
-<option value="4">Internet</option>
-
-
-<option value="5">A través de un amigo o conocido</option>
-
-
-</select>
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="provincia">Provincia</label>
-
-
-<select name="provincia">
-
-
-<option value="1">Prefiero no contestar</option>
-
-
-<option value="2">Publicidad</option>
-
-
-<option value="3">Profesionales del sector</option>
-
-
-<option value="4">Internet</option>
-
-
-<option value="5">A través de un amigo o conocido</option>
-
-
-</select>
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="pais">País</label>
-
-
-<input type="text" class="form-control" id="pais" name="pais">
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="iban">Iban</label>
-
-
-<input type="text" class="form-control" id="iban" name="iban">
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="pago">Forma de pago:</label>
-
-
-<select name="pago">
-
-
-<option value="1">Mensual</option>
-
-
-<option value="2">Trimestral</option>
-
-
-<option value="3">Anual</option>
-
-
-</select>
-
-
-</div>
-
-
-</fieldset>
-
-
-
-
-
-
-<fieldset class="col-md-offset-1 col-md-5">
-
-
-<legend>Datos de acceso:</legend>
-
-
-<div class="form-group">
-
-
-<label for="usuario">Usuario</label>
-
-
-<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Introduce tu usuario">
-
-
-</div>
-
-
-<div class="form-group">
-
-
-<label for="password">Contraseña</label>
-
-
-<input type="password" class="form-control" id="password" name="password" placeholder="Introduce tu contraseña">
-
-
-<input type="password" class="form-control" id="password2" name="password2" placeholder="Introduce otra vez tu contraseña">
-
-
-</div>
-
-
-</fieldset>
-
-
-<div class="form-group col-md-8">
-
-
-<button type="submit" class="btn btn-primary">Enviar</button>
-
-
-</div>
-
-</form>
-
-
-</div>
- <!-- build:js(.) scripts/vendor.js -->
+    
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Aviso al usuario</h4>
+      </div>
+      <div class="modal-body">
+          <p>Se va a dar de alta<br/> La primera cuota es de <span id="cuota">50 euros</span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" id="aceptar" class="btn btn-primary">Aceptar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+    <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery.complexify.js/jquery.complexify.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/validacion_xtra.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>
