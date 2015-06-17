@@ -1,10 +1,10 @@
 'use strict';
 $(document).ready(function () {
 
-    //------------------CODIGO PARA VALIDATE-----------    
+    //------------------CÓDIGO PARA VALIDATE-----------    
 
     var $requerido = '<span class="glyphicon glyphicon-asterisk">';
-
+    //ESCRIBO VALORES Y REQUISITOS DE LOS CAMPOS DEL FORMULARIO
     $('#frm_validar').validate({
         rules: {
             nombre: {
@@ -60,19 +60,19 @@ $(document).ready(function () {
         },
         messages: {
             nombre: {
-                required: "Debes escribir tu nombre",
-                minlength: "Nombre demasiado corto"
+                required: "Escribe tu nombre",
+                minlength: "Longitud del nombre inválida"
             },
             apellidos: {
-                required: "Debes escribir tus apellidos"
+                required: "Escribe tus apellidos"
             },
             telefono: {
-                required: "Debes escribir tu teléfono",
-                minlength: "Escribe un teléfono válido"
+                required: "Escribe tu número de teléfono",
+                minlength: "Este número no es válido"
             },
             email: {
-                email: "El correo electronico no es valido",
-                required: "Escribe tu correo electrónico"
+                email: "Tu email no es válido",
+                required: "Escribe tu email correctamente"
             },
             email2: {
                 email: "El correo electronico no es valido",
@@ -94,7 +94,7 @@ $(document).ready(function () {
                 required: "Introduce una contraseña"
             },
             password2: {
-                equalTo: "Introduce la misma contraseña"
+                equalTo: "Repite la contraseña"
             }
 
         },
@@ -132,13 +132,13 @@ $(document).ready(function () {
     $('select#pagos').on('change', function () {
         var valor = $(this).val();
         if (valor == 1) {
-            $("#cuota").html("50 euros");
+            $("#cuota").html("59 €");
         }
         if (valor == 2) {
-            $("#cuota").html("140 euros");
+            $("#cuota").html("99 €");
         }
         if (valor == 3) {
-            $("#cuota").html("550 euros");
+            $("#cuota").html("299 €");
         }
     });
 
@@ -168,7 +168,7 @@ $(document).ready(function () {
     $("input[name=cp]").change(completaLocalidad);
 
     function completaLocalidad() {
-        //PASO EL CP DEL DOM AL FICHERO PHP
+        //ENVIO EL CODIGO POSTAL AL FICHERO PHP
         if ($(this).val().length == 4) {
 
             var cp = 0 + $(this).val();
@@ -212,3 +212,5 @@ $(document).ready(function () {
 
 
 });
+
+//FINALIZO EL SCRIPT
